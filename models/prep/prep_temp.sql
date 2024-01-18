@@ -5,7 +5,9 @@ WITH temp_daily AS (
 add_weekday AS (
     SELECT *,
         to_char(date,'day') AS weekday,
-        to_char(date,'DD') AS day_num
+        to_char(date,'DD') AS day_num,
+        to_char(date,'week') AS week,
+        to_char(date,'month') AS month
     FROM temp_daily
 )
 SELECT *
